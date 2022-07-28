@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name "LT1807IMS8PBF")(type "KiCad")(uri "${KIPRJMOD}/lib/LT1807IMS8PBF/LT1807IMS8PBF.kicad_sym")(options "")(descr ""))
+  (lib (name "LT3461ES6TRPBF")(type "KiCad")(uri "${KIPRJMOD}/lib/LT3461ES6TRPBF/LT3461ES6TRPBF.kicad_sym")(options "")(descr ""))
+  (lib (name "DEV-16771")(type "KiCad")(uri "${KIPRJMOD}/lib/DEV-16771/DEV-16771.kicad_sym")(options "")(descr ""))
+  (lib (name "CosmicWatchPro")(type "KiCad")(uri "${KIPRJMOD}/lib/CosmicWatchPro.kicad_sym")(options "")(descr ""))
+)

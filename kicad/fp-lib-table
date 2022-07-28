@@ -1,0 +1,4 @@
+(fp_lib_table
+  (lib (name "CosmicWatchPro")(type "KiCad")(uri "${KIPRJMOD}/lib/CosmicWatchPro.pretty")(options "")(descr ""))
+  (lib (name "Panelization")(type "KiCad")(uri "${KIPRJMOD}/lib/Panelization.pretty-master")(options "")(descr ""))
+)

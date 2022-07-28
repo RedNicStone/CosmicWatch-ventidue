@@ -1,0 +1,27 @@
+EESchema-DOCLIB  Version 2.0
+#
+$CMP Digital_Rotary_Encoder_Switch
+D Rotary encoder, dual channel, incremental quadrate outputs, with switch
+K rotary switch encoder switch push button
+F ~
+$ENDCMP
+#
+$CMP SiPM_MICRORB−10035−MLP
+D Silicon photomultiplier
+K SiPM MPPC SPAD photon counting
+F ~
+$ENDCMP
+#
+$CMP TCR2EF
+D 1A, Low Drop-out Voltage Regulator, Fixed Output 3.3V, SOT-23-5
+K LDO Voltage Regulator 1A
+F https://www.torexsemi.com/file/xc6220/XC6220.pdf
+$ENDCMP
+#
+$CMP XC6210B332MR
+D 700mA, Low Drop-out Voltage Regulator, Fixed Output 3.3V, SOT-23-5
+K LDO Voltage Regulator 700mA
+F https://www.torexsemi.com/file/xc6210/XC6210.pdf
+$ENDCMP
+#
+#End Doc Library
