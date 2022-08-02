@@ -6,7 +6,7 @@
 
   (title_block
     (date "2022-07-14")
-    (rev "2.3")
+    (rev "2.5")
   )
 
   (lib_symbols
@@ -1148,6 +1148,9 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (id 3) (at 38.1 54.61 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "LCSC" "C89258" (id 4) (at 38.1 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (pin "1" (uuid 64fd88e3-b98c-46f6-9b77-cc5eecbdedeb))
