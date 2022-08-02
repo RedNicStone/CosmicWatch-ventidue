@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <export version="E">
   <design>
-    <source>/home/nic/Documents/CosmicWatchProV2/CosmicWatchPro.kicad_sch</source>
-    <date>Wed 20 Jul 2022 09:21:30 CEST</date>
+    <source>/home/nic/CosmicWatch-ventidue/kicad/CosmicWatch-ventidue.kicad_sch</source>
+    <date>Sun 31 Jul 2022 19:23:14 CEST</date>
     <tool>Eeschema 6.0.6-1.fc36</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
@@ -10,7 +10,7 @@
         <company/>
         <rev>2.3</rev>
         <date>2022-07-14</date>
-        <source>CosmicWatchPro.kicad_sch</source>
+        <source>CosmicWatch-ventidue.kicad_sch</source>
         <comment number="1" value="Houses a Teensy 4.1 for data processing and coincidence detection"/>
         <comment number="2" value="Utilises two SPiM diodes for event detection"/>
         <comment number="3" value="A detector for cosmic rays"/>
@@ -99,18 +99,26 @@
     <comp ref="BZ101">
       <value>Buzzer</value>
       <footprint>Buzzer_Beeper:Buzzer_TDK_PS1240P02BT_D12.2mm_H6.5mm</footprint>
+      <fields>
+        <field name="LCSC">C76871</field>
+      </fields>
       <libsource lib="Device" part="Buzzer" description="Buzzer, polarized"/>
+      <property name="LCSC" value="C76871"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>ac6f161d-5dc3-43de-959c-ee4322c070a8</tstamps>
     </comp>
     <comp ref="D101">
       <value>BAS70XY</value>
-      <footprint>Package_TO_SOT_SMD:SOT-666</footprint>
+      <footprint>CosmicWatchPro:SOT-666</footprint>
+      <fields>
+        <field name="LCSC">C73592</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="BAS70XY" description="Dual Schottky diode, anode/center/cathode"/>
+      <property name="LCSC" value="C73592"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>c128e883-aad7-420c-aed4-dee1552d27b2 6ef737ba-d96c-40ae-b978-3564490d8cd5</tstamps>
     </comp>
@@ -119,7 +127,7 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical_SMD_Pin1Right</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>275e7cce-879c-487b-ab40-873bf1ba6c6f</tstamps>
     </comp>
@@ -128,7 +136,7 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical_SMD_Pin1Right</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>79aed775-7b6c-4728-a47e-71d5baf965a2</tstamps>
     </comp>
@@ -137,7 +145,7 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical_SMD_Pin1Right</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>7026559d-70d5-4d5c-9f9e-d4f36a879a6b</tstamps>
     </comp>
@@ -146,7 +154,7 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x07_P2.54mm_Vertical_SMD_Pin1Right</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>31f55603-5cd7-4956-9662-c00107c4cc5b</tstamps>
     </comp>
@@ -155,7 +163,7 @@
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>fdf23d51-d351-4223-9abd-55ff586c405d</tstamps>
     </comp>
@@ -164,7 +172,7 @@
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>07115776-6606-4cc9-8051-950e9e483d44</tstamps>
     </comp>
@@ -173,7 +181,7 @@
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>1b6a3f9f-c3a7-4f3d-96a9-2311a1b75dfb</tstamps>
     </comp>
@@ -182,7 +190,7 @@
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>07a9d331-2258-4b6f-879b-9614a58bf968</tstamps>
     </comp>
@@ -191,25 +199,25 @@
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x04_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>8bcdb5b8-fc05-4116-a919-25f9d93ab791</tstamps>
     </comp>
     <comp ref="J110">
-      <value>GPS</value>
-      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x09_P2.54mm_Vertical</footprint>
-      <libsource lib="Connector_Generic" part="Conn_01x09" description="Generic connector, single row, 01x09, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <value>Mini GPS</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_1x06_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x06" description="Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
-      <tstamps>4ab12665-be15-4d36-ae37-163543418f28</tstamps>
+      <tstamps>bbc964a4-d471-4a84-a69d-b06c9fb4da8f</tstamps>
     </comp>
     <comp ref="J111">
       <value>OLED</value>
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x07_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x07" description="Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>2fa0d52f-6977-4278-8458-5cf56ecb9483</tstamps>
     </comp>
@@ -218,52 +226,25 @@
       <footprint>Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical</footprint>
       <libsource lib="Connector_Generic" part="Conn_01x05" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>90a82875-194c-4d10-b8c2-e68d73d245f7</tstamps>
-    </comp>
-    <comp ref="R101">
-      <value>0</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>2ebae46f-6637-460e-9090-c99d50f08513</tstamps>
     </comp>
     <comp ref="R102">
       <value>1k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>b84cff35-8a2c-4704-874d-a7f8f27d90c7</tstamps>
-    </comp>
-    <comp ref="R103">
-      <value>1k</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>c4a04611-a6c9-408d-8a82-c462c4b71cbf</tstamps>
-    </comp>
-    <comp ref="R104">
-      <value>1k</value>
-      <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
-      <libsource lib="Device" part="R" description="Resistor"/>
-      <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
-      <sheetpath names="/" tstamps="/"/>
-      <tstamps>67b10b00-d12d-4dad-92af-e17b24a8f9ec</tstamps>
     </comp>
     <comp ref="R105">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>81da95aa-10c3-4589-8862-944a1f71275a</tstamps>
     </comp>
@@ -272,7 +253,7 @@
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
       <libsource lib="Device" part="R" description="Resistor"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>6be2b1c9-0dd9-469f-8aec-004700b70393</tstamps>
     </comp>
@@ -281,7 +262,7 @@
       <footprint>Connector_PinSocket_2.54mm:PinSocket_1x05_P2.54mm_Vertical</footprint>
       <libsource lib="CosmicWatchPro" part="Digital_Rotary_Encoder_Switch" description="Rotary encoder, dual channel, incremental quadrate outputs, with switch"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000061c3d0d6</tstamps>
     </comp>
@@ -300,7 +281,7 @@
       <property name="MANUFACTURER" value="SparkFun Electronics"/>
       <property name="MAXIMUM_PACKAGE_HEIGHT" value="4.07mm"/>
       <property name="Sheetname" value=""/>
-      <property name="Sheetfile" value="CosmicWatchPro.kicad_sch"/>
+      <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
       <tstamps>00000000-0000-0000-0000-000061c30e65</tstamps>
     </comp>
@@ -413,9 +394,13 @@
       <tstamps>10a702f3-c57e-4da2-a76a-b13795c0ab02</tstamps>
     </comp>
     <comp ref="D201">
-      <value>SiPM_MICRORB−10035−MLP</value>
-      <footprint>CosmicWatchPro:SiPM_MIRCOB-20035-MLP_HS</footprint>
+      <value>SiPM_MICRORB−60035−MLP</value>
+      <footprint>CosmicWatchPro:SiPM_MICROFC-60035-SMT-HANDSOLDER</footprint>
+      <fields>
+        <field name="LCSC">C905854</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="SiPM_MICRORB−10035−MLP" description="Silicon photomultiplier"/>
+      <property name="LCSC" value="C905854"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -423,8 +408,12 @@
     </comp>
     <comp ref="D202">
       <value>BAS70XY</value>
-      <footprint>Package_TO_SOT_SMD:SOT-666</footprint>
+      <footprint>CosmicWatchPro:SOT-666</footprint>
+      <fields>
+        <field name="LCSC">C73592</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="BAS70XY" description="Dual Schottky diode, anode/center/cathode"/>
+      <property name="LCSC" value="C73592"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -617,7 +606,11 @@
     <comp ref="U201">
       <value>LT1807</value>
       <footprint>Package_SO:MSOP-8_3x3mm_P0.65mm</footprint>
+      <fields>
+        <field name="LCSC">C665379</field>
+      </fields>
       <libsource lib="LT1807IMS8PBF" part="LT1807" description=""/>
+      <property name="LCSC" value="C665379"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -741,9 +734,13 @@
       <tstamps>10a702f3-c57e-4da2-a76a-b13795c0ab02</tstamps>
     </comp>
     <comp ref="D301">
-      <value>SiPM_MICRORB−10035−MLP</value>
-      <footprint>CosmicWatchPro:SiPM_MIRCOB-20035-MLP_HS</footprint>
+      <value>SiPM_MICRORB−60035−MLP</value>
+      <footprint>CosmicWatchPro:SiPM_MICROFC-60035-SMT-HANDSOLDER</footprint>
+      <fields>
+        <field name="LCSC">C905854</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="SiPM_MICRORB−10035−MLP" description="Silicon photomultiplier"/>
+      <property name="LCSC" value="C905854"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -751,8 +748,12 @@
     </comp>
     <comp ref="D302">
       <value>BAS70XY</value>
-      <footprint>Package_TO_SOT_SMD:SOT-666</footprint>
+      <footprint>CosmicWatchPro:SOT-666</footprint>
+      <fields>
+        <field name="LCSC">C73592</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="BAS70XY" description="Dual Schottky diode, anode/center/cathode"/>
+      <property name="LCSC" value="C73592"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -945,7 +946,11 @@
     <comp ref="U301">
       <value>LT1807</value>
       <footprint>Package_SO:MSOP-8_3x3mm_P0.65mm</footprint>
+      <fields>
+        <field name="LCSC">C665379</field>
+      </fields>
       <libsource lib="LT1807IMS8PBF" part="LT1807" description=""/>
+      <property name="LCSC" value="C665379"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -962,8 +967,12 @@
     </comp>
     <comp ref="BT401">
       <value>Battery_Cell</value>
-      <footprint>Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical</footprint>
+      <footprint>Connector_Molex:Molex_PicoBlade_53047-0210_1x02_P1.25mm_Vertical</footprint>
+      <fields>
+        <field name="LCSC">C518987</field>
+      </fields>
       <libsource lib="Device" part="Battery_Cell" description="Single-cell battery"/>
+      <property name="LCSC" value="C518987"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1006,7 +1015,7 @@
       <tstamps>28b360a0-b4c2-4ea0-9d65-c85a4f970f6b</tstamps>
     </comp>
     <comp ref="C405">
-      <value>1uF</value>
+      <value>1uF, 50V</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value="Power"/>
@@ -1015,7 +1024,7 @@
       <tstamps>24a8d30e-fd20-4275-924e-d6072d200ddd</tstamps>
     </comp>
     <comp ref="C406">
-      <value>1uF</value>
+      <value>1uF, 50V</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value="Power"/>
@@ -1024,7 +1033,7 @@
       <tstamps>3eea9e31-c9b2-488a-a2d0-c378ce246c82</tstamps>
     </comp>
     <comp ref="C407">
-      <value>10nF</value>
+      <value>10nF, 50V</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
       <property name="Sheetname" value="Power"/>
@@ -1035,7 +1044,11 @@
     <comp ref="D401">
       <value>D_Schottky</value>
       <footprint>Diode_SMD:D_SOD-123</footprint>
+      <fields>
+        <field name="LCSC">C1884550</field>
+      </fields>
       <libsource lib="Device" part="D_Schottky" description="Schottky diode"/>
+      <property name="LCSC" value="C1884550"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1044,7 +1057,11 @@
     <comp ref="L401">
       <value>47uH</value>
       <footprint>Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C113070</field>
+      </fields>
       <libsource lib="Device" part="L" description="Inductor"/>
+      <property name="LCSC" value="C113070"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1088,7 +1105,7 @@
     </comp>
     <comp ref="TP402">
       <value>TestPoint</value>
-      <footprint>TestPoint:TestPoint_Pad_2.5x2.5mm</footprint>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -1097,7 +1114,7 @@
     </comp>
     <comp ref="TP403">
       <value>TestPoint</value>
-      <footprint>TestPoint:TestPoint_Pad_2.5x2.5mm</footprint>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -1106,7 +1123,7 @@
     </comp>
     <comp ref="TP404">
       <value>TestPoint</value>
-      <footprint>TestPoint:TestPoint_Pad_2.5x2.5mm</footprint>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -1115,7 +1132,7 @@
     </comp>
     <comp ref="TP405">
       <value>TestPoint</value>
-      <footprint>TestPoint:TestPoint_Pad_2.5x2.5mm</footprint>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -1124,7 +1141,7 @@
     </comp>
     <comp ref="TP406">
       <value>TestPoint</value>
-      <footprint>TestPoint:TestPoint_Pad_2.5x2.5mm</footprint>
+      <footprint>TestPoint:TestPoint_Pad_D2.0mm</footprint>
       <libsource lib="Connector" part="TestPoint" description="test point"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
@@ -1133,7 +1150,7 @@
     </comp>
     <comp ref="U401">
       <value>TCR2EF</value>
-      <footprint>Package_TO_SOT_SMD:SOT-23-5</footprint>
+      <footprint>Package_TO_SOT_SMD:SOT-23-5_HandSoldering</footprint>
       <datasheet>https://www.torexsemi.com/file/xc6220/XC6220.pdf</datasheet>
       <libsource lib="CosmicWatchPro" part="TCR2EF" description="1A, Low Drop-out Voltage Regulator, Fixed Output 3.3V, SOT-23-5"/>
       <property name="Sheetname" value="Power"/>
@@ -1142,10 +1159,14 @@
       <tstamps>8a476c6b-e403-46d7-8eea-e97d068078da</tstamps>
     </comp>
     <comp ref="U402">
-      <value>MAX5025</value>
+      <value>MAX5026</value>
       <footprint>Package_TO_SOT_SMD:TSOT-23-6_HandSoldering</footprint>
       <datasheet>https://datasheets.maximintegrated.com/en/ds/MAX5025-MAX5028.pdf</datasheet>
+      <fields>
+        <field name="LCSC">C87603</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="MAX5025" description="500kHz, 36V Output, PWM Step-Up DC-DC Converter"/>
+      <property name="LCSC" value="C87603"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1224,6 +1245,26 @@
         <pin num="5" name="Pin_5" type="passive"/>
       </pins>
     </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x06">
+      <description>Generic connector, single row, 01x06, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x06</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+      </pins>
+    </libpart>
     <libpart lib="Connector_Generic" part="Conn_01x07">
       <description>Generic connector, single row, 01x07, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
       <docs>~</docs>
@@ -1243,29 +1284,6 @@
         <pin num="5" name="Pin_5" type="passive"/>
         <pin num="6" name="Pin_6" type="passive"/>
         <pin num="7" name="Pin_7" type="passive"/>
-      </pins>
-    </libpart>
-    <libpart lib="Connector_Generic" part="Conn_01x09">
-      <description>Generic connector, single row, 01x09, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
-      <docs>~</docs>
-      <footprints>
-        <fp>Connector*:*_1x??_*</fp>
-      </footprints>
-      <fields>
-        <field name="Reference">J</field>
-        <field name="Value">Conn_01x09</field>
-        <field name="Datasheet">~</field>
-      </fields>
-      <pins>
-        <pin num="1" name="Pin_1" type="passive"/>
-        <pin num="2" name="Pin_2" type="passive"/>
-        <pin num="3" name="Pin_3" type="passive"/>
-        <pin num="4" name="Pin_4" type="passive"/>
-        <pin num="5" name="Pin_5" type="passive"/>
-        <pin num="6" name="Pin_6" type="passive"/>
-        <pin num="7" name="Pin_7" type="passive"/>
-        <pin num="8" name="Pin_8" type="passive"/>
-        <pin num="9" name="Pin_9" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="CosmicWatchPro" part="BAS70XY">
@@ -1607,13 +1625,13 @@
       <uri>/usr/share/kicad/symbols//Connector_Generic.kicad_sym</uri>
     </library>
     <library logical="CosmicWatchPro">
-      <uri>/home/nic/Documents/CosmicWatchProV2/lib/CosmicWatchPro.kicad_sym</uri>
+      <uri>/home/nic/CosmicWatch-ventidue/kicad/lib/CosmicWatchPro.kicad_sym</uri>
     </library>
     <library logical="Device">
       <uri>/usr/share/kicad/symbols//Device.kicad_sym</uri>
     </library>
     <library logical="LT1807IMS8PBF">
-      <uri>/home/nic/Documents/CosmicWatchProV2/lib/LT1807IMS8PBF/LT1807IMS8PBF.kicad_sym</uri>
+      <uri>/home/nic/CosmicWatch-ventidue/kicad/lib/LT1807IMS8PBF/LT1807IMS8PBF.kicad_sym</uri>
     </library>
   </libraries>
   <nets>
@@ -1621,10 +1639,10 @@
       <node ref="D101" pin="2" pinfunction="K" pintype="passive"/>
       <node ref="D101" pin="5" pinfunction="K" pintype="passive"/>
       <node ref="J109" pin="4" pinfunction="Pin_4" pintype="passive"/>
-      <node ref="J110" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="J110" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="J111" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="J112" pin="1" pinfunction="Pin_1" pintype="passive"/>
-      <node ref="R104" pin="2" pintype="passive"/>
+      <node ref="SW101" pin="2" pinfunction="VCC" pintype="power_in"/>
       <node ref="TP403" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U101" pin="3.3V_1" pinfunction="3.3V" pintype="power_in"/>
       <node ref="U101" pin="3.3V_2" pinfunction="3.3V__1" pintype="power_in"/>
@@ -1647,7 +1665,6 @@
     </net>
     <net code="4" name="+BATT">
       <node ref="BT401" pin="1" pinfunction="+" pintype="passive"/>
-      <node ref="R101" pin="1" pintype="passive"/>
       <node ref="TP404" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U101" pin="VBAT" pinfunction="VBAT" pintype="passive"/>
     </net>
@@ -1665,27 +1682,27 @@
     </net>
     <net code="7" name="/D_{1}-F">
       <node ref="D101" pin="3" pinfunction="common" pintype="passive"/>
+      <node ref="J106" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U101" pin="15" pinfunction="A1" pintype="bidirectional"/>
     </net>
     <net code="8" name="/D_{1}-P_{1}">
+      <node ref="J106" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="U101" pin="27" pinfunction="A13" pintype="bidirectional"/>
     </net>
     <net code="9" name="/D_{1}-P_{2}">
+      <node ref="J106" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="U101" pin="26" pinfunction="A12" pintype="bidirectional"/>
     </net>
     <net code="10" name="/D_{2}-F">
       <node ref="D101" pin="6" pinfunction="common" pintype="passive"/>
-      <node ref="J106" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="J108" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U101" pin="40" pinfunction="A16" pintype="bidirectional"/>
     </net>
     <net code="11" name="/D_{2}-P_{1}">
-      <node ref="J106" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="J108" pin="4" pinfunction="Pin_4" pintype="passive"/>
       <node ref="U101" pin="25" pinfunction="A11" pintype="bidirectional"/>
     </net>
     <net code="12" name="/D_{2}-P_{2}">
-      <node ref="J106" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="J108" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="U101" pin="24" pinfunction="A10" pintype="bidirectional"/>
     </net>
@@ -1884,19 +1901,19 @@
       <node ref="U501" pin="3" pinfunction="RD+" pintype="passive"/>
     </net>
     <net code="37" name="/GPS-EN">
-      <node ref="J110" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="J110" pin="1" pinfunction="Pin_1" pintype="passive"/>
       <node ref="U101" pin="28" pinfunction="RX7" pintype="bidirectional"/>
     </net>
     <net code="38" name="/GPS-PPS">
-      <node ref="J110" pin="9" pinfunction="Pin_9" pintype="passive"/>
+      <node ref="J110" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="U101" pin="29" pinfunction="TX7" pintype="bidirectional"/>
     </net>
     <net code="39" name="/GPS-RX">
-      <node ref="J110" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J110" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="U101" pin="0" pinfunction="RX1" pintype="bidirectional"/>
     </net>
     <net code="40" name="/GPS-TX">
-      <node ref="J110" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J110" pin="3" pinfunction="Pin_3" pintype="passive"/>
       <node ref="U101" pin="1" pinfunction="TX1" pintype="bidirectional"/>
     </net>
     <net code="41" name="/I^{2}C-SCL">
@@ -1981,14 +1998,14 @@
       <node ref="J108" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="J108" pin="7" pinfunction="Pin_7" pintype="passive"/>
       <node ref="J109" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="J110" pin="7" pinfunction="Pin_7" pintype="passive"/>
+      <node ref="J110" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="J111" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="J112" pin="5" pinfunction="Pin_5" pintype="passive"/>
       <node ref="R102" pin="2" pintype="passive"/>
-      <node ref="R103" pin="2" pintype="passive"/>
       <node ref="R105" pin="2" pintype="passive"/>
       <node ref="R106" pin="2" pintype="passive"/>
       <node ref="R401" pin="1" pintype="passive"/>
+      <node ref="SW101" pin="1" pinfunction="GND" pintype="power_in"/>
       <node ref="TP401" pin="1" pinfunction="1" pintype="passive"/>
       <node ref="U101" pin="GND1" pinfunction="GND" pintype="power_in"/>
       <node ref="U101" pin="GND2" pinfunction="GND__1" pintype="power_in"/>
@@ -2126,112 +2143,94 @@
       <node ref="L401" pin="2" pinfunction="2" pintype="passive"/>
       <node ref="U402" pin="6" pinfunction="LX" pintype="output"/>
     </net>
-    <net code="80" name="Net-(J110-Pad3)">
-      <node ref="J110" pin="3" pinfunction="Pin_3" pintype="passive"/>
-      <node ref="R101" pin="2" pintype="passive"/>
-    </net>
-    <net code="81" name="Net-(R103-Pad1)">
-      <node ref="R103" pin="1" pintype="passive"/>
-      <node ref="SW101" pin="1" pinfunction="GND" pintype="power_in"/>
-    </net>
-    <net code="82" name="Net-(R104-Pad1)">
-      <node ref="R104" pin="1" pintype="passive"/>
-      <node ref="SW101" pin="2" pinfunction="VCC" pintype="power_in"/>
-    </net>
-    <net code="83" name="Net-(R105-Pad1)">
+    <net code="80" name="Net-(R105-Pad1)">
       <node ref="R105" pin="1" pintype="passive"/>
       <node ref="U101" pin="14" pinfunction="A0" pintype="bidirectional"/>
       <node ref="U101" pin="16" pinfunction="A2" pintype="bidirectional"/>
     </net>
-    <net code="84" name="Net-(R106-Pad1)">
+    <net code="81" name="Net-(R106-Pad1)">
       <node ref="R106" pin="1" pintype="passive"/>
       <node ref="U101" pin="39" pinfunction="A15" pintype="bidirectional"/>
       <node ref="U101" pin="41" pinfunction="A17" pintype="bidirectional"/>
     </net>
-    <net code="85" name="Net-(R401-Pad2)">
+    <net code="82" name="Net-(R401-Pad2)">
       <node ref="R401" pin="2" pintype="passive"/>
       <node ref="R402" pin="1" pintype="passive"/>
       <node ref="U402" pin="3" pinfunction="FB" pintype="input"/>
     </net>
-    <net code="86" name="unconnected-(D201-Pad4)">
+    <net code="83" name="unconnected-(D201-Pad4)">
       <node ref="D201" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="87" name="unconnected-(D301-Pad4)">
+    <net code="84" name="unconnected-(D301-Pad4)">
       <node ref="D301" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="88" name="unconnected-(J110-Pad1)">
-      <node ref="J110" pin="1" pinfunction="Pin_1" pintype="passive+no_connect"/>
-    </net>
-    <net code="89" name="unconnected-(J110-Pad4)">
-      <node ref="J110" pin="4" pinfunction="Pin_4" pintype="passive+no_connect"/>
-    </net>
-    <net code="90" name="unconnected-(J112-Pad4)">
+    <net code="85" name="unconnected-(J112-Pad4)">
       <node ref="J112" pin="4" pinfunction="Pin_4" pintype="passive+no_connect"/>
     </net>
-    <net code="91" name="unconnected-(U101-Pad9)">
+    <net code="86" name="unconnected-(U101-Pad9)">
       <node ref="U101" pin="9" pinfunction="OUT1C" pintype="output+no_connect"/>
     </net>
-    <net code="92" name="unconnected-(U101-Pad17)">
+    <net code="87" name="unconnected-(U101-Pad17)">
       <node ref="U101" pin="17" pinfunction="A3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="93" name="unconnected-(U101-Pad20)">
+    <net code="88" name="unconnected-(U101-Pad20)">
       <node ref="U101" pin="20" pinfunction="A6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="94" name="unconnected-(U101-Pad22)">
+    <net code="89" name="unconnected-(U101-Pad22)">
       <node ref="U101" pin="22" pinfunction="A8" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="95" name="unconnected-(U101-Pad23)">
+    <net code="90" name="unconnected-(U101-Pad23)">
       <node ref="U101" pin="23" pinfunction="A9" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="96" name="unconnected-(U101-Pad30)">
+    <net code="91" name="unconnected-(U101-Pad30)">
       <node ref="U101" pin="30" pinfunction="CRX3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="97" name="unconnected-(U101-Pad31)">
+    <net code="92" name="unconnected-(U101-Pad31)">
       <node ref="U101" pin="31" pinfunction="CTX3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="98" name="unconnected-(U101-Pad32)">
+    <net code="93" name="unconnected-(U101-Pad32)">
       <node ref="U101" pin="32" pinfunction="OUT1B" pintype="output+no_connect"/>
     </net>
-    <net code="99" name="unconnected-(U101-Pad33)">
+    <net code="94" name="unconnected-(U101-Pad33)">
       <node ref="U101" pin="33" pinfunction="MCLK2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="100" name="unconnected-(U101-Pad34)">
+    <net code="95" name="unconnected-(U101-Pad34)">
       <node ref="U101" pin="34" pinfunction="RX8" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="101" name="unconnected-(U101-Pad35)">
+    <net code="96" name="unconnected-(U101-Pad35)">
       <node ref="U101" pin="35" pinfunction="TX8" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="102" name="unconnected-(U101-Pad38)">
+    <net code="97" name="unconnected-(U101-Pad38)">
       <node ref="U101" pin="38" pinfunction="A14" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="103" name="unconnected-(U101-PadD+)">
+    <net code="98" name="unconnected-(U101-PadD+)">
       <node ref="U101" pin="D+" pinfunction="D+" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="104" name="unconnected-(U101-PadD-)">
+    <net code="99" name="unconnected-(U101-PadD-)">
       <node ref="U101" pin="D-" pinfunction="D-" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="105" name="unconnected-(U101-PadON/OFF)">
+    <net code="100" name="unconnected-(U101-PadON/OFF)">
       <node ref="U101" pin="ON/OFF" pinfunction="ON/OFF" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="106" name="unconnected-(U101-PadPROGRAM)">
+    <net code="101" name="unconnected-(U101-PadPROGRAM)">
       <node ref="U101" pin="PROGRAM" pinfunction="PROGRAM" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="107" name="unconnected-(U101-PadUSB_GND1)">
+    <net code="102" name="unconnected-(U101-PadUSB_GND1)">
       <node ref="U101" pin="USB_GND1" pinfunction="USB_GND" pintype="power_in+no_connect"/>
     </net>
-    <net code="108" name="unconnected-(U101-PadUSB_GND2)">
+    <net code="103" name="unconnected-(U101-PadUSB_GND2)">
       <node ref="U101" pin="USB_GND2" pinfunction="USB_GND__1" pintype="power_in+no_connect"/>
     </net>
-    <net code="109" name="unconnected-(U101-PadVIN)">
+    <net code="104" name="unconnected-(U101-PadVIN)">
       <node ref="U101" pin="VIN" pinfunction="VIN" pintype="input+no_connect"/>
     </net>
-    <net code="110" name="unconnected-(U101-PadVUSB)">
+    <net code="105" name="unconnected-(U101-PadVUSB)">
       <node ref="U101" pin="VUSB" pinfunction="VUSB" pintype="passive+no_connect"/>
     </net>
-    <net code="111" name="unconnected-(U401-Pad4)">
+    <net code="106" name="unconnected-(U401-Pad4)">
       <node ref="U401" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="112" name="unconnected-(U501-Pad7)">
+    <net code="107" name="unconnected-(U501-Pad7)">
       <node ref="U501" pin="7" pintype="no_connect"/>
     </net>
   </nets>
