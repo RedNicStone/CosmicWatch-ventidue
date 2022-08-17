@@ -1,0 +1,123 @@
+//
+// Created by nic on 07/08/22.
+//
+
+#undef abs
+#undef F
+#undef PI
+
+#include "src/graphics/types.h"
+#include "src/graphics/algorithms/sdf_generators.h"
+#include "src/graphics/algorithms/sdf_transformations.h"
+#include "src/graphics/algorithms/sdf_combiantorics.h"
+#include "src/graphics/renderer/sdf_mix.h"
+#include "src/graphics/renderer/assets.h"
+#include "src/graphics/driver/OLED_1_5INCH_128x128.h"
+
+using namespace SDF;
+
+class CustomPixelTranspositionEngine : public PixelTranspositionEngine {
+  public:
+    inline static RGB8 transpose(vec3 value) {
+        return RGB8(value * 255);
+    }
+};
+
+unsigned int height = 128;
+unsigned int width = 128;
+
+auto image = PixelBuffer<RGB8>(Point2D(height, width));
+
+void OLED_1in5_rgb_Display_Fast_(const uint8_t *Image, uint8_t *data) {
+  data[0] = 0x15;
+  data[1] = 0x00;
+  data[2] = 0x7F;
+  data[3] = 0x75;
+  data[4] = 0x00;
+  data[5] = 0x7F;
+
+  //fill
+  data[6] = 0x5C;
+
+  for(int i=0; i<OLED_1in5_RGB_HEIGHT; i++)
+    for(int j=0; j<OLED_1in5_RGB_WIDTH*2; j++) {
+      data[7 + j + i*256] = Image[j + i*256];
+    }
+}
+
+void OLED_1in5_rgb_Transfer_(uint8_t *data) {
+  OLED_DC_1;
+  OLED_CS_0;
+
+  SPI.transfer(data, 7 + OLED_1in5_RGB_HEIGHT * OLED_1in5_RGB_WIDTH * 2);
+
+  OLED_CS_1;
+}
+
+
+uint8_t Image_[OLED_1in5_RGB_WIDTH * OLED_1in5_RGB_HEIGHT * 2];
+uint8_t data[100 + OLED_1in5_RGB_WIDTH * OLED_1in5_RGB_HEIGHT * 2];
+
+void calcSDF {
+    auto sdf = MVisualization(TTranslate(TScale(CInterpolate(
+        GSegment(vec2(-35.0f), vec2(35.0f), 10.0f),
+        TRotate(GSegment(vec2(-35.0f), vec2(35.0f), 10.0f), 90)
+        , 0.9), 1), vec2(64)));
+
+    auto asset = SDFAsset<vec3, decltype(sdf)>(sdf, {height, width});
+    asset.load();
+
+    BufferTranspositionEngine<vec3, RGB8, CustomPixelTranspositionEngine>::transpose(image, asset.getBuffer(), { {0u, 0u }, { height, width }}, {0u, 0u});
+
+    asset.free();
+}
+
+void setup() {
+  System_Init();
+
+  //set Serial
+  Serial.begin(9600);
+  Serial.println("Starting...");
+
+  OLED_1in5_rgb_Init();
+  Serial.println("Display initialized");
+
+  Driver_Delay_ms(500);
+  OLED_1in5_rgb_Clear();
+  Serial.println("Display cleared");
+
+  for(int i=0; i<OLED_1in5_RGB_HEIGHT; i++)
+    for(int j=0; j<OLED_1in5_RGB_WIDTH*2; j++) {
+      Image_[j + i*256] = i + j;
+    }
+  Serial.println("Display contents generated");
+
+  //OLED_1in5_rgb_Display_Fast(Image, data);
+  Serial.println("Display contents serilized");
+}
+
+void loop() {
+  unsigned long startTime = millis();
+
+  for (int i = 0; i < 100; i++) {
+    //OLED_1in5_rgb_Display(Image);
+
+
+    /*for(int i=0; i<OLED_1in5_RGB_HEIGHT; i++)
+      for(int j=0; j<OLED_1in5_RGB_WIDTH*2; j++) {
+        Image[j + i*256] = i;
+      }*/
+
+    OLED_1in5_rgb_Display_Fast_(Image_, data);
+    OLED_1in5_rgb_Transfer_(data);
+  }
+
+  unsigned long endTime = millis();
+  double elapsedTime = (endTime - startTime) / 1000.0;
+
+  double transferedData = OLED_1in5_RGB_HEIGHT * OLED_1in5_RGB_WIDTH * 3;
+  double transferRate = transferedData / elapsedTime;
+  double frameRate = 100 / elapsedTime;
+
+  Serial.println("Transfer rate is: " + String(transferRate) + ", Frame rate is: " + String(frameRate));
+}

@@ -28,15 +28,15 @@
     //Use the  library function definition
 *****************************************************************************************/
 //GPIO config
-#define OLED_CS 17
+#define OLED_CS 10
 #define OLED_CS_0     digitalWrite(OLED_CS, LOW)
 #define OLED_CS_1     digitalWrite(OLED_CS, HIGH)
 
-#define OLED_RST 15
+#define OLED_RST 7
 #define OLED_RST_0    digitalWrite(OLED_RST, LOW)
 #define OLED_RST_1    digitalWrite(OLED_RST, HIGH)
 
-#define OLED_DC 16
+#define OLED_DC 6
 #define OLED_DC_0     digitalWrite(OLED_DC, LOW)
 #define OLED_DC_1     digitalWrite(OLED_DC, HIGH)
 

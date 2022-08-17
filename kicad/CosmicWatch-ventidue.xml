@@ -2,13 +2,13 @@
 <export version="E">
   <design>
     <source>/home/nic/CosmicWatch-ventidue/kicad/CosmicWatch-ventidue.kicad_sch</source>
-    <date>Sun 31 Jul 2022 19:23:14 CEST</date>
+    <date>Wed 10 Aug 2022 09:05:06 CEST</date>
     <tool>Eeschema 6.0.6-1.fc36</tool>
     <sheet number="1" name="/" tstamps="/">
       <title_block>
         <title>Cosmic Watch Pro</title>
         <company/>
-        <rev>2.3</rev>
+        <rev>2.5</rev>
         <date>2022-07-14</date>
         <source>CosmicWatch-ventidue.kicad_sch</source>
         <comment number="1" value="Houses a Teensy 4.1 for data processing and coincidence detection"/>
@@ -26,7 +26,7 @@
       <title_block>
         <title>Detector PCB</title>
         <company/>
-        <rev>2.3</rev>
+        <rev>2.5</rev>
         <date>2022-07-14</date>
         <source>detector.kicad_sch</source>
         <comment number="1" value="Pulse extenders are used to sample the event's intensity via the Teensy's analog I/O"/>
@@ -44,7 +44,7 @@
       <title_block>
         <title>Detector PCB</title>
         <company/>
-        <rev>2.3</rev>
+        <rev>2.5</rev>
         <date>2022-07-14</date>
         <source>detector.kicad_sch</source>
         <comment number="1" value="Pulse extenders are used to sample the event's intensity via the Teensy's analog I/O"/>
@@ -62,7 +62,7 @@
       <title_block>
         <title>Power Circuitry</title>
         <company/>
-        <rev>2.3</rev>
+        <rev>2.5</rev>
         <date>2022-07-14</date>
         <source>power.kicad_sch</source>
         <comment number="1" value="The battery is only to be installed if no GPS module is present"/>
@@ -80,7 +80,7 @@
       <title_block>
         <title/>
         <company/>
-        <rev>2.3</rev>
+        <rev>2.5</rev>
         <date>2022-07-14</date>
         <source>ethernet.kicad_sch</source>
         <comment number="1" value=""/>
@@ -233,7 +233,11 @@
     <comp ref="R102">
       <value>1k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17513</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17513"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -242,7 +246,11 @@
     <comp ref="R105">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17414"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -251,7 +259,11 @@
     <comp ref="R106">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17414"/>
       <property name="Sheetname" value=""/>
       <property name="Sheetfile" value="CosmicWatch-ventidue.kicad_sch"/>
       <sheetpath names="/" tstamps="/"/>
@@ -288,7 +300,11 @@
     <comp ref="C201">
       <value>10nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C24666</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C24666"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -297,7 +313,11 @@
     <comp ref="C202">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89258</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89258"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -306,7 +326,11 @@
     <comp ref="C203">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89190</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89190"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -315,7 +339,11 @@
     <comp ref="C204">
       <value>10nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C24666</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C24666"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -324,7 +352,11 @@
     <comp ref="C205">
       <value>10nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C24666</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C24666"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -333,7 +365,11 @@
     <comp ref="C206">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89258</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89258"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -342,7 +378,11 @@
     <comp ref="C207">
       <value>10nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C24666</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C24666"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -351,7 +391,11 @@
     <comp ref="C208">
       <value>13pF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C501858</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C501858"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -360,7 +404,11 @@
     <comp ref="C209">
       <value>13pF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C501858</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C501858"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -369,7 +417,11 @@
     <comp ref="C210">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89190</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89190"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -378,7 +430,11 @@
     <comp ref="C211">
       <value>2nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C51574</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C51574"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -387,7 +443,11 @@
     <comp ref="C212">
       <value>2nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C51574</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C51574"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -423,7 +483,11 @@
       <value>Conn_SMA</value>
       <footprint>Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</footprint>
       <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC">C88374</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="Conn_SMA" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <property name="LCSC" value="C88374"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -433,7 +497,11 @@
       <value>Conn_SMA</value>
       <footprint>Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</footprint>
       <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC">C88374</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="Conn_SMA" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <property name="LCSC" value="C88374"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -443,7 +511,11 @@
       <value>Conn_SMA</value>
       <footprint>Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</footprint>
       <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC">C88374</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="Conn_SMA" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <property name="LCSC" value="C88374"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -453,7 +525,11 @@
       <value>Conn_SMA</value>
       <footprint>Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</footprint>
       <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC">C88374</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="Conn_SMA" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <property name="LCSC" value="C88374"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -462,7 +538,11 @@
     <comp ref="R201">
       <value>50</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C2828807</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C2828807"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -471,7 +551,11 @@
     <comp ref="R202">
       <value>50</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C2828807</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C2828807"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -480,7 +564,11 @@
     <comp ref="R203">
       <value>10</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C96347</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C96347"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -489,7 +577,11 @@
     <comp ref="R204">
       <value>150</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17471</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17471"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -498,7 +590,11 @@
     <comp ref="R205">
       <value>2.32k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17522</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17522"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -507,7 +603,11 @@
     <comp ref="R206">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17414"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -516,7 +616,11 @@
     <comp ref="R207">
       <value>150</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17471</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17471"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -525,7 +629,11 @@
     <comp ref="R208">
       <value>1k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17513</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17513"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -534,7 +642,11 @@
     <comp ref="R209">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C149504</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C149504"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -543,7 +655,11 @@
     <comp ref="R210">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17414"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -552,7 +668,11 @@
     <comp ref="R211">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C149504</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C149504"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -561,7 +681,11 @@
     <comp ref="R212">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C149504</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C149504"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -570,7 +694,11 @@
     <comp ref="R213">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C149504</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C149504"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -619,7 +747,11 @@
     <comp ref="U202">
       <value>LT1807</value>
       <footprint>Package_SO:MSOP-8_3x3mm_P0.65mm</footprint>
+      <fields>
+        <field name="LCSC">C665379</field>
+      </fields>
       <libsource lib="LT1807IMS8PBF" part="LT1807" description=""/>
+      <property name="LCSC" value="C665379"/>
       <property name="Sheetname" value="Detector PCB 2"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 2/" tstamps="/0aa079d8-77fa-4ac9-9231-92043ef65910/"/>
@@ -628,7 +760,11 @@
     <comp ref="C301">
       <value>10nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C24666</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C24666"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -637,7 +773,11 @@
     <comp ref="C302">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89258</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89258"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -646,7 +786,11 @@
     <comp ref="C303">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89190</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89190"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -655,7 +799,11 @@
     <comp ref="C304">
       <value>10nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C24666</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C24666"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -664,7 +812,11 @@
     <comp ref="C305">
       <value>10nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C24666</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C24666"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -673,7 +825,11 @@
     <comp ref="C306">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89258</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89258"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -682,7 +838,11 @@
     <comp ref="C307">
       <value>10nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C24666</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C24666"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -691,7 +851,11 @@
     <comp ref="C308">
       <value>13pF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C501858</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C501858"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -700,7 +864,11 @@
     <comp ref="C309">
       <value>13pF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C501858</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C501858"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -709,7 +877,11 @@
     <comp ref="C310">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89190</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89190"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -718,7 +890,11 @@
     <comp ref="C311">
       <value>2nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C51574</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C51574"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -727,7 +903,11 @@
     <comp ref="C312">
       <value>2nF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C51574</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C51574"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -763,7 +943,11 @@
       <value>Conn_SMA</value>
       <footprint>Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</footprint>
       <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC">C88374</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="Conn_SMA" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <property name="LCSC" value="C88374"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -773,7 +957,11 @@
       <value>Conn_SMA</value>
       <footprint>Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</footprint>
       <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC">C88374</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="Conn_SMA" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <property name="LCSC" value="C88374"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -783,7 +971,11 @@
       <value>Conn_SMA</value>
       <footprint>Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</footprint>
       <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC">C88374</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="Conn_SMA" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <property name="LCSC" value="C88374"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -793,7 +985,11 @@
       <value>Conn_SMA</value>
       <footprint>Connector_Coaxial:U.FL_Molex_MCRF_73412-0110_Vertical</footprint>
       <datasheet> ~</datasheet>
+      <fields>
+        <field name="LCSC">C88374</field>
+      </fields>
       <libsource lib="CosmicWatchPro" part="Conn_SMA" description="coaxial connector (BNC, SMA, SMB, SMC, Cinch/RCA, ...)"/>
+      <property name="LCSC" value="C88374"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -802,7 +998,11 @@
     <comp ref="R301">
       <value>50</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C2828807</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C2828807"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -811,7 +1011,11 @@
     <comp ref="R302">
       <value>50</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C2828807</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C2828807"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -820,7 +1024,11 @@
     <comp ref="R303">
       <value>10</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C96347</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C96347"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -829,7 +1037,11 @@
     <comp ref="R304">
       <value>150</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17471</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17471"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -838,7 +1050,11 @@
     <comp ref="R305">
       <value>2.32k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17522</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17522"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -847,7 +1063,11 @@
     <comp ref="R306">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17414"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -856,7 +1076,11 @@
     <comp ref="R307">
       <value>150</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17471</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17471"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -865,7 +1089,11 @@
     <comp ref="R308">
       <value>1k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17513</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17513"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -874,7 +1102,11 @@
     <comp ref="R309">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C149504</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C149504"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -883,7 +1115,11 @@
     <comp ref="R310">
       <value>10k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17414</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17414"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -892,7 +1128,11 @@
     <comp ref="R311">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C149504</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C149504"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -901,7 +1141,11 @@
     <comp ref="R312">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C149504</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C149504"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -910,7 +1154,11 @@
     <comp ref="R313">
       <value>100k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C149504</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C149504"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -959,7 +1207,11 @@
     <comp ref="U302">
       <value>LT1807</value>
       <footprint>Package_SO:MSOP-8_3x3mm_P0.65mm</footprint>
+      <fields>
+        <field name="LCSC">C665379</field>
+      </fields>
       <libsource lib="LT1807IMS8PBF" part="LT1807" description=""/>
+      <property name="LCSC" value="C665379"/>
       <property name="Sheetname" value="Detector PCB 1"/>
       <property name="Sheetfile" value="detector.kicad_sch"/>
       <sheetpath names="/Detector PCB 1/" tstamps="/c4459660-8d96-4879-b019-93b11aa2f8dc/"/>
@@ -981,7 +1233,11 @@
     <comp ref="C401">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89190</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89190"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -990,7 +1246,11 @@
     <comp ref="C402">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89190</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89190"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -999,7 +1259,11 @@
     <comp ref="C403">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89190</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89190"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1008,7 +1272,11 @@
     <comp ref="C404">
       <value>1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89190</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89190"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1017,7 +1285,11 @@
     <comp ref="C405">
       <value>1uF, 50V</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C111768</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C111768"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1026,7 +1298,11 @@
     <comp ref="C406">
       <value>1uF, 50V</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C111768</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C111768"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1035,7 +1311,11 @@
     <comp ref="C407">
       <value>10nF, 50V</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C83170</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C83170"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1054,6 +1334,19 @@
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
       <tstamps>c82c2824-4729-4395-9a33-3653dc8145b9</tstamps>
     </comp>
+    <comp ref="J401">
+      <value>Conn_01x02</value>
+      <footprint>Connector_JST:JST_PH_B2B-PH-K_1x02_P2.00mm_Vertical</footprint>
+      <fields>
+        <field name="LCSC">C225240</field>
+      </fields>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="LCSC" value="C225240"/>
+      <property name="Sheetname" value="Power"/>
+      <property name="Sheetfile" value="power.kicad_sch"/>
+      <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
+      <tstamps>f6db9d2b-e9e5-4852-b9e7-19631a5fb6f8</tstamps>
+    </comp>
     <comp ref="L401">
       <value>47uH</value>
       <footprint>Inductor_SMD:L_1210_3225Metric_Pad1.42x2.65mm_HandSolder</footprint>
@@ -1070,7 +1363,11 @@
     <comp ref="R401">
       <value>6.65k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17770</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17770"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1079,7 +1376,11 @@
     <comp ref="R402">
       <value>147k</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17462</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17462"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1088,7 +1389,11 @@
     <comp ref="R403">
       <value>100</value>
       <footprint>Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C17408</field>
+      </fields>
       <libsource lib="Device" part="R" description="Resistor"/>
+      <property name="LCSC" value="C17408"/>
       <property name="Sheetname" value="Power"/>
       <property name="Sheetfile" value="power.kicad_sch"/>
       <sheetpath names="/Power/" tstamps="/82d97847-e04a-4a1f-9fa1-7972f4b8a954/"/>
@@ -1175,7 +1480,11 @@
     <comp ref="C501">
       <value>0.1uF</value>
       <footprint>Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder</footprint>
+      <fields>
+        <field name="LCSC">C89258</field>
+      </fields>
       <libsource lib="Device" part="C" description="Unpolarized capacitor"/>
+      <property name="LCSC" value="C89258"/>
       <property name="Sheetname" value="Ethernet"/>
       <property name="Sheetfile" value="ethernet.kicad_sch"/>
       <sheetpath names="/Ethernet/" tstamps="/2d96bd06-e9b5-43a4-a1e8-fb9f9ed87e5f/"/>
@@ -1206,6 +1515,22 @@
       </fields>
       <pins>
         <pin num="1" name="1" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
       </pins>
     </libpart>
     <libpart lib="Connector_Generic" part="Conn_01x04">
@@ -2001,6 +2326,7 @@
       <node ref="J110" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="J111" pin="6" pinfunction="Pin_6" pintype="passive"/>
       <node ref="J112" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J401" pin="2" pinfunction="Pin_2" pintype="passive"/>
       <node ref="R102" pin="2" pintype="passive"/>
       <node ref="R105" pin="2" pintype="passive"/>
       <node ref="R106" pin="2" pintype="passive"/>
@@ -2158,71 +2484,72 @@
       <node ref="R402" pin="1" pintype="passive"/>
       <node ref="U402" pin="3" pinfunction="FB" pintype="input"/>
     </net>
-    <net code="83" name="unconnected-(D201-Pad4)">
+    <net code="83" name="Vcc">
+      <node ref="J401" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="U101" pin="VIN" pinfunction="VIN" pintype="input"/>
+    </net>
+    <net code="84" name="unconnected-(D201-Pad4)">
       <node ref="D201" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="84" name="unconnected-(D301-Pad4)">
+    <net code="85" name="unconnected-(D301-Pad4)">
       <node ref="D301" pin="4" pinfunction="NC" pintype="no_connect"/>
     </net>
-    <net code="85" name="unconnected-(J112-Pad4)">
+    <net code="86" name="unconnected-(J112-Pad4)">
       <node ref="J112" pin="4" pinfunction="Pin_4" pintype="passive+no_connect"/>
     </net>
-    <net code="86" name="unconnected-(U101-Pad9)">
+    <net code="87" name="unconnected-(U101-Pad9)">
       <node ref="U101" pin="9" pinfunction="OUT1C" pintype="output+no_connect"/>
     </net>
-    <net code="87" name="unconnected-(U101-Pad17)">
+    <net code="88" name="unconnected-(U101-Pad17)">
       <node ref="U101" pin="17" pinfunction="A3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="88" name="unconnected-(U101-Pad20)">
+    <net code="89" name="unconnected-(U101-Pad20)">
       <node ref="U101" pin="20" pinfunction="A6" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="89" name="unconnected-(U101-Pad22)">
+    <net code="90" name="unconnected-(U101-Pad22)">
       <node ref="U101" pin="22" pinfunction="A8" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="90" name="unconnected-(U101-Pad23)">
+    <net code="91" name="unconnected-(U101-Pad23)">
       <node ref="U101" pin="23" pinfunction="A9" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="91" name="unconnected-(U101-Pad30)">
+    <net code="92" name="unconnected-(U101-Pad30)">
       <node ref="U101" pin="30" pinfunction="CRX3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="92" name="unconnected-(U101-Pad31)">
+    <net code="93" name="unconnected-(U101-Pad31)">
       <node ref="U101" pin="31" pinfunction="CTX3" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="93" name="unconnected-(U101-Pad32)">
+    <net code="94" name="unconnected-(U101-Pad32)">
       <node ref="U101" pin="32" pinfunction="OUT1B" pintype="output+no_connect"/>
     </net>
-    <net code="94" name="unconnected-(U101-Pad33)">
+    <net code="95" name="unconnected-(U101-Pad33)">
       <node ref="U101" pin="33" pinfunction="MCLK2" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="95" name="unconnected-(U101-Pad34)">
+    <net code="96" name="unconnected-(U101-Pad34)">
       <node ref="U101" pin="34" pinfunction="RX8" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="96" name="unconnected-(U101-Pad35)">
+    <net code="97" name="unconnected-(U101-Pad35)">
       <node ref="U101" pin="35" pinfunction="TX8" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="97" name="unconnected-(U101-Pad38)">
+    <net code="98" name="unconnected-(U101-Pad38)">
       <node ref="U101" pin="38" pinfunction="A14" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="98" name="unconnected-(U101-PadD+)">
+    <net code="99" name="unconnected-(U101-PadD+)">
       <node ref="U101" pin="D+" pinfunction="D+" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="99" name="unconnected-(U101-PadD-)">
+    <net code="100" name="unconnected-(U101-PadD-)">
       <node ref="U101" pin="D-" pinfunction="D-" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="100" name="unconnected-(U101-PadON/OFF)">
+    <net code="101" name="unconnected-(U101-PadON/OFF)">
       <node ref="U101" pin="ON/OFF" pinfunction="ON/OFF" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="101" name="unconnected-(U101-PadPROGRAM)">
+    <net code="102" name="unconnected-(U101-PadPROGRAM)">
       <node ref="U101" pin="PROGRAM" pinfunction="PROGRAM" pintype="bidirectional+no_connect"/>
     </net>
-    <net code="102" name="unconnected-(U101-PadUSB_GND1)">
+    <net code="103" name="unconnected-(U101-PadUSB_GND1)">
       <node ref="U101" pin="USB_GND1" pinfunction="USB_GND" pintype="power_in+no_connect"/>
     </net>
-    <net code="103" name="unconnected-(U101-PadUSB_GND2)">
+    <net code="104" name="unconnected-(U101-PadUSB_GND2)">
       <node ref="U101" pin="USB_GND2" pinfunction="USB_GND__1" pintype="power_in+no_connect"/>
-    </net>
-    <net code="104" name="unconnected-(U101-PadVIN)">
-      <node ref="U101" pin="VIN" pinfunction="VIN" pintype="input+no_connect"/>
     </net>
     <net code="105" name="unconnected-(U101-PadVUSB)">
       <node ref="U101" pin="VUSB" pinfunction="VUSB" pintype="passive+no_connect"/>

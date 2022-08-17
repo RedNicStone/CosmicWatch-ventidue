@@ -1,0 +1,63 @@
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 295:Plugin executed on: 'linux'
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 296:Plugin executed with python version: '3.10.5 (main, Jun  9 2022, 00:00:00) [GCC 12.1.1 20220507 (Red Hat 12.1.1-1)]'
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 297:KiCad build version: 6.0.6-1.fc36
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 298:Plugin version: 1.1.2
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 299:Frame repr: <wx._core.Frame object at 0x7f6aa7292b00>
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 323:Preparing replicator with D301 as a reference
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 98:getting a list of all footprints on board
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 110:Footprint mouse-bite-2mm-slot does not have Sheetfile property, it will not be replicated. Most likely it is only in schematics
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 110:Footprint mouse-bite-2mm-slot does not have Sheetfile property, it will not be replicated. Most likely it is only in schematics
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 351:source anchor footprint is 'D301'
+Located on: ['Detector PCB 1']
+With filenames: ['detector.kicad_sch']
+With sheet_id:['Detector PCB 1']
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 358:Corresponding footprints are 
+[('D201', ['Detector PCB 2']), ('D301', ['Detector PCB 1'])]
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 370:Showing dialog
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 376:Toolbar position: wx.Point(1430, 125)
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 382:Dialog position: wx.Point(1066, 125)
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 335:constructing a list of sheets suitable for replication on level:'Detector PCB 1', file:'detector.kicad_sch'
+08-16 22:15:28 com_github_MitjaNemec_ReplicateLayout.replicate_layout 372:suitable sheets are:[['Detector PCB 2']]
+08-16 22:15:31 com_github_MitjaNemec_ReplicateLayout.replicate_layout 335:constructing a list of sheets suitable for replication on level:'Detector PCB 1', file:'detector.kicad_sch'
+08-16 22:15:31 com_github_MitjaNemec_ReplicateLayout.replicate_layout 372:suitable sheets are:[['Detector PCB 2']]
+08-16 22:15:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 335:constructing a list of sheets suitable for replication on level:'Detector PCB 1', file:'detector.kicad_sch'
+08-16 22:15:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 372:suitable sheets are:[['Detector PCB 2']]
+08-16 22:15:32 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 145:Replicating layout
+08-16 22:15:32 com_github_MitjaNemec_ReplicateLayout.replicate_layout 146:Starting replication of sheets: [['Detector PCB 2']]
+on level: ['Detector PCB 1']
+with tracks=True, zone=True, text=True, containing=False, remove=False, locked=False, by_group=False
+08-16 22:15:32 root 235:updating GUI message: 'Preparing for replication'
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 215:Getting the list of source footprints
+08-16 22:15:33 root 240:updating GUI with: 0
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 230:Getting the list of all the remaining footprints
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 235:Getting nets local to source footprints
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 238:Getting source bounding box
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 242:Getting source tracks
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 257:Getting source zones
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 266:Getting source text items
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 275:Getting source drawing items
+08-16 22:15:33 root 235:updating GUI message: 'Replicating footprints'
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 669:Replicating footprints
+08-16 22:15:33 root 240:updating GUI with: 0
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 675:Replicating footprints on sheet ['Detector PCB 2']
+08-16 22:15:33 root 235:updating GUI message: 'Replicating tracks'
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 835:Replicating tracks
+08-16 22:15:33 root 240:updating GUI with: 0
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 841:Replicating tracks on sheet ['Detector PCB 2']
+08-16 22:15:33 root 235:updating GUI message: 'Replicating zones'
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 893:Replicating zones
+08-16 22:15:33 root 240:updating GUI with: 0
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 900:Replicating zones on sheet ['Detector PCB 2']
+08-16 22:15:33 root 240:updating GUI with: 100
+08-16 22:15:33 root 235:updating GUI message: 'Replicating text'
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 963:Replicating text
+08-16 22:15:33 root 240:updating GUI with: 0
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 970:Replicating text on sheet ['Detector PCB 2']
+08-16 22:15:33 root 235:updating GUI message: 'Replicating drawings'
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1003:Replicating drawings
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.replicate_layout 1009:Replicating drawings on sheet ['Detector PCB 2']
+08-16 22:15:33 root 240:updating GUI with: 16
+08-16 22:15:33 root 240:updating GUI with: 19
+08-16 22:15:33 root 240:updating GUI with: 58
+08-16 22:15:33 root 240:updating GUI with: 95
+08-16 22:15:33 com_github_MitjaNemec_ReplicateLayout.action_replicate_layout 169:Replication complete

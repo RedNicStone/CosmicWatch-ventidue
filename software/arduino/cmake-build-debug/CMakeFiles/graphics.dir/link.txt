@@ -1,0 +1,1 @@
+/usr/lib64/ccache/c++ -g CMakeFiles/graphics.dir/home/nic/.config/JetBrains/CLion2022.1/scratches/scratch.cpp.o -o graphics 

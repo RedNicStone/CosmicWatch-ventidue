@@ -7,6 +7,4 @@ file(GLOB_RECURSE SRC ${CMAKE_SOURCE_DIR}/src/*.cpp)
 file(GLOB_RECURSE HEADER ${CMAKE_SOURCE_DIR}/src/*.h)
 
 add_executable(graphics
-        ${SRC}
-        ${HEADER}
-        tests/other/simple_demo.cpp)
+        /home/nic/.config/JetBrains/CLion2022.1/scratches/scratch.cpp)
