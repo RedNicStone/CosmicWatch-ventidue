@@ -56,8 +56,6 @@ class UI {
     static void begin(PixelBuffer<UIPixelType>& pixelBuffer, Region2D region = {});
     static void end();
 
-    static bool toggleButton(bool enabled);
-
 };
 
 #endif //GRAPHICS_TILING_H

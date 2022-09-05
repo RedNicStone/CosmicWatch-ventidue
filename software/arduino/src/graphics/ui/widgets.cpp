@@ -1,16 +1,14 @@
 //
-// Created by nic on 07/08/22.
+// Created by RedNicStone for ProtonAnticheat-server on 9/4/22.
 //
 
-#include "tiling.h"
-#include "../renderer/sdf_mix.h"
-#include "../algorithms/sdf_generators.h"
+#include "widgets.h"
 
+using namespace UI;
 
-bool UI::toggleButton(bool enabled) {
-    //UI::currentTiling.newNode();
-    WidgetData data;
-    //data.pixelFunction = std::function<UIPixelType(const vec2&)>(SDF::MRGB8(SDF::MVisualization(SDF::GCircle(0.5f)))
-    //    .operator());
-    return false;
+UIPixelType Button::renderFunction(const vec2 &pos) {
+    if (!visible)
+        return {0.0f, 0.0f, 0.0f, 1.0f};
+
+    vec4 color;
 }
