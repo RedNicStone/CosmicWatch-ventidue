@@ -8,7 +8,7 @@
     (title "Cosmic Watch Pro")
     (date "2022-07-14")
     (rev "3.3")
-    (comment 1 "Houses a Teensy 4.1 for data processing and coincidence detection")
+    (comment 1 "Houses a Teensy 4.1 for pData processing and coincidence detection")
     (comment 2 "Utilises two SPiM diodes for event detection")
     (comment 3 "A detector for cosmic rays")
   )

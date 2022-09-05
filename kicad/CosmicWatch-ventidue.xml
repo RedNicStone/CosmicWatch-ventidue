@@ -11,7 +11,7 @@
         <rev>2.5</rev>
         <date>2022-07-14</date>
         <source>CosmicWatch-ventidue.kicad_sch</source>
-        <comment number="1" value="Houses a Teensy 4.1 for data processing and coincidence detection"/>
+        <comment number="1" value="Houses a Teensy 4.1 for pData processing and coincidence detection"/>
         <comment number="2" value="Utilises two SPiM diodes for event detection"/>
         <comment number="3" value="A detector for cosmic rays"/>
         <comment number="4" value=""/>
