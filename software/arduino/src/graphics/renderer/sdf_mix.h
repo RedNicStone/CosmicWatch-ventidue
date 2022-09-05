@@ -9,6 +9,7 @@
 #undef abs
 #endif
 
+#include "../types.h"
 #include "../algorithms/sdf_primitives.h"
 
 

@@ -5,7 +5,10 @@
 #ifndef GRAPHICS_TYPES_H
 #define GRAPHICS_TYPES_H
 
+#include <cstdint>
+
 #include "vector.h"
+
 
 inline constexpr char operator "" _c( unsigned long long arg ) noexcept {
     return static_cast< char >( arg );

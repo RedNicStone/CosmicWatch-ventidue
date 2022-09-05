@@ -2,7 +2,7 @@
 // Created by nic on 07/08/22.
 //
 
-#ifndef __unix_
+#ifndef __unix__
 #ifndef GRAPHICS_OLED_1_5INCH_128X128_H
 #define GRAPHICS_OLED_1_5INCH_128X128_H
 
