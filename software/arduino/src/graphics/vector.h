@@ -70,57 +70,57 @@ class vec_abs {
 
     // Getters
 
-    inline T operator[](int index) const { return data[index]; };
-    inline T& operator[](int index) { return data[index]; };
+    inline T operator[](int index) const { return pData[index]; };
+    inline T& operator[](int index) { return pData[index]; };
 
 
     template<class _ = void> requires (N >= 1)  // If there are enough elements
-    inline T x() const { return data[0]; };  // get X
+    inline T x() const { return pData[0]; };  // get X
 
     template<class _ = void> requires (N >= 2)  // If there are enough elements
-    inline T y() const { return data[1]; };  // get Y
+    inline T y() const { return pData[1]; };  // get Y
 
     template<class _ = void> requires (N >= 3)  // If there are enough elements
-    inline T z() const { return data[2]; };  // get Z
+    inline T z() const { return pData[2]; };  // get Z
 
     template<class _ = void> requires (N >= 4)  // If there are enough elements
-    inline T w() const { return data[3]; };  // get W
+    inline T w() const { return pData[3]; };  // get W
 
     template<class _ = void> requires (N >= 1)  // If there are enough elements
-    inline T r() const { return data[0]; };  // get R
+    inline T r() const { return pData[0]; };  // get R
 
     template<class _ = void> requires (N >= 2)  // If there are enough elements
-    inline T g() const { return data[1]; };  // get G
+    inline T g() const { return pData[1]; };  // get G
 
     template<class _ = void> requires (N >= 3)  // If there are enough elements
-    inline T b() const { return data[2]; };  // get B
+    inline T b() const { return pData[2]; };  // get B
 
     template<class _ = void> requires (N >= 4)  // If there are enough elements
-    inline T a() const { return data[3]; };  // get A
+    inline T a() const { return pData[3]; };  // get A
 
     template<class _ = void> requires (N >= 1)  // If there are enough elements
-    inline T& x() { return data[0]; };  // get X
+    inline T& x() { return pData[0]; };  // get X
 
     template<class _ = void> requires (N >= 2)  // If there are enough elements
-    inline T& y() { return data[1]; };  // get Y
+    inline T& y() { return pData[1]; };  // get Y
 
     template<class _ = void> requires (N >= 3)  // If there are enough elements
-    inline T& z() { return data[2]; };  // get Z
+    inline T& z() { return pData[2]; };  // get Z
 
     template<class _ = void> requires (N >= 4)  // If there are enough elements
-    inline T& w() { return data[3]; };  // get W
+    inline T& w() { return pData[3]; };  // get W
 
     template<class _ = void> requires (N >= 1)  // If there are enough elements
-    inline T& r() { return data[0]; };  // get R
+    inline T& r() { return pData[0]; };  // get R
 
     template<class _ = void> requires (N >= 2)  // If there are enough elements
-    inline T& g() { return data[1]; };  // get G
+    inline T& g() { return pData[1]; };  // get G
 
     template<class _ = void> requires (N >= 3)  // If there are enough elements
-    inline T& b() { return data[2]; };  // get B
+    inline T& b() { return pData[2]; };  // get B
 
     template<class _ = void> requires (N >= 4)  // If there are enough elements
-    inline T& a() { return data[3]; };  // get A
+    inline T& a() { return pData[3]; };  // get A
 
 #ifdef __unix__
     template<typename ...D> requires // only compile if:
@@ -166,8 +166,10 @@ class vec_abs {
     //template<class _ = void> requires std::is_arithmetic_v<T>
     //const vec_abs& cross(const vec_abs& vec);
 
+    [[nodiscard]] inline void* data() { return pData.data(); };
+
   private:
-    std::array<T, N> data;
+    std::array<T, N> pData;
 };
 
 typedef vec_abs<float, 2> vec2;
@@ -216,39 +218,39 @@ typedef vec_abs<u_int64_t, 4> ulvec4;
 
 template<typename T, size_t N>
 vec_abs<T, N>::vec_abs() {
-    data = std::array<T, N>();  // create a new array
+    pData = std::array<T, N>();  // create a new array
 }
 
 template<typename T, size_t N>
 vec_abs<T, N>::vec_abs(const std::array<T, N> &arr) {
-    data = std::array<T, N>(arr);  // copy the array
+    pData = std::array<T, N>(arr);  // copy the array
 }
 
 /*template<typename T, size_t N>
 template<typename ...Ts> requires std::conjunction<std::is_convertible<Ts, T>...>::value && (sizeof...(Ts) == N)
 vec_abs<T, N>::vec_abs(const Ts &&... values) {
-    data = std::array<T, N>{values...};  // create a new array with the given values
+    pData = std::array<T, N>{values...};  // create a new array with the given values
 }*/
 
 template<typename T, size_t N>
 template<class _> requires (N > 1)
 vec_abs<T, N>::vec_abs(const T value) {
-    data = std::array<T, N>();
-    data.fill(value);
+    pData = std::array<T, N>();
+    pData.fill(value);
 }
 
 template<typename T, size_t N>
 template<typename... Ts> requires std::conjunction<std::is_convertible<Ts, T>...>::value && (sizeof...(Ts) == N)
 vec_abs<T, N>::vec_abs(const Ts... values) {
-    data = std::array<T, N>{values...};  // create a new array with the given values
+    pData = std::array<T, N>{values...};  // create a new array with the given values
 }
 
 template<typename T, size_t N>
 template<typename TOther> requires std::is_convertible<TOther, T>::value
 vec_abs<T, N>::vec_abs(const vec_abs<TOther, N> &vector) {
-    data = std::array<T, N>();
+    pData = std::array<T, N>();
     for (size_t i = 0; i < N; i++) {
-        data[i] = (T) vector[i];
+        pData[i] = (T) vector[i];
     }
 }
 
@@ -259,7 +261,7 @@ auto vec_abs<T, N>::swizzle(D... indices) const -> vec_abs<T, sizeof...(indices)
     std::array<T, sizeof...(indices)> array;
     size_t i = 0;
     for (auto index : { indices... }) {
-        array[i] = data[index];
+        array[i] = pData[index];
         i++;
     }
     return vec_abs<T, sizeof...(indices)>(array);
@@ -271,7 +273,7 @@ template<class _> requires std::is_arithmetic_v<T>
 vec_abs<T, N>::operator T() {
     T length;
     for (size_t i = 0; i < N; i++) {
-        length += data[i] * data[i];
+        length += pData[i] * pData[i];
     }
     length = std::sqrt(length);
     return length;
@@ -283,7 +285,7 @@ template<class _> requires std::is_arithmetic_v<T>
 T vec_abs<T, N>::getLength() const {
     T length = 0;
     for (size_t i = 0; i < N; i++) {
-        length += data[i] * data[i];
+        length += pData[i] * pData[i];
     }
     length = std::sqrt(length);
     return length;
@@ -294,7 +296,7 @@ template<class _> requires std::is_arithmetic_v<T>
 vec_abs<T, N> vec_abs<T, N>::operator+(const vec_abs &vector) const {
     vec_abs<T, N> res;
     for (size_t i = 0; i < N; i++) {
-        res[i] = data[i] + vector[i];
+        res[i] = pData[i] + vector[i];
     }
     return res;
 }
@@ -304,7 +306,7 @@ template<class _> requires std::is_arithmetic_v<T>
 vec_abs<T, N> vec_abs<T, N>::operator-(const vec_abs &vector) const {
     vec_abs<T, N> res;
     for (size_t i = 0; i < N; i++) {
-        res[i] = data[i] - vector[i];
+        res[i] = pData[i] - vector[i];
     }
     return res;
 }
@@ -314,7 +316,7 @@ template<class _> requires std::is_arithmetic_v<T>
 const vec_abs &vec_abs<T, N>::operator*(const vec_abs &vector) {
     vec_abs<T, N> res;
     for (size_t i = 0; i < N; i++) {
-        res[i] = data[i] * vector[i];
+        res[i] = pData[i] * vector[i];
     }
     return res;
 }*/
@@ -324,7 +326,7 @@ template<class _> requires std::is_arithmetic_v<T>
 vec_abs<T, N> vec_abs<T, N>::operator*(const T &fac) const {
     vec_abs<T, N> res;
     for (size_t i = 0; i < N; i++) {
-        res[i] = data[i] * fac;
+        res[i] = pData[i] * fac;
     }
     return res;
 }
@@ -334,7 +336,7 @@ template<class _> requires std::is_arithmetic_v<T>
 vec_abs<T, N> vec_abs<T, N>::operator/(const T &fac) const {
     vec_abs<T, N> res;
     for (size_t i = 0; i < N; i++) {
-        res[i] = data[i] / fac;
+        res[i] = pData[i] / fac;
     }
     return res;
 }
@@ -343,7 +345,7 @@ template<typename T, size_t N>
 template<class _> requires std::is_arithmetic_v<T>
 const vec_abs<T, N> &vec_abs<T, N>::operator+=(const vec_abs &vector) {
     for (size_t i = 0; i < N; i++) {
-        data[i] = data[i] + vector[i];
+        pData[i] = pData[i] + vector[i];
     }
     return *this;
 }
@@ -352,7 +354,7 @@ template<typename T, size_t N>
 template<class _> requires std::is_arithmetic_v<T>
 const vec_abs<T, N> &vec_abs<T, N>::operator-=(const vec_abs &vector) {
     for (size_t i = 0; i < N; i++) {
-        data[i] = data[i] - vector[i];
+        pData[i] = pData[i] - vector[i];
     }
     return *this;
 }
@@ -361,7 +363,7 @@ template<typename T, size_t N>
 template<class _> requires std::is_arithmetic_v<T>
 const vec_abs<T, N> &vec_abs<T, N>::operator*=(const T &value) {
     for (size_t i = 0; i < N; i++) {
-        data[i] = data[i] * value;
+        pData[i] = pData[i] * value;
     }
     return *this;
 }
@@ -370,7 +372,7 @@ template<typename T, size_t N>
 template<class _> requires std::is_arithmetic_v<T>
 const vec_abs<T, N> &vec_abs<T, N>::operator/=(const T &value) {
     for (size_t i = 0; i < N; i++) {
-        data[i] = data[i] / value;
+        pData[i] = pData[i] / value;
     }
     return *this;
 }
@@ -381,7 +383,7 @@ vec_abs<T, N> vec_abs<T, N>::normalize() const {
     vec_abs<T, N> res;
     T length = getLength();
     for (size_t i = 0; i < N; i++) {
-        res[i] = data[i] / length;
+        res[i] = pData[i] / length;
     }
     return res;
 }
@@ -391,7 +393,7 @@ template<class _> requires std::is_arithmetic_v<T>
 vec_abs<T, N> vec_abs<T, N>::absolute() const {
     vec_abs<T, N> res;
     for (size_t i = 0; i < N; i++) {
-        res[i] = std::abs(data[i]);
+        res[i] = std::abs(pData[i]);
     }
     return res;
 }
