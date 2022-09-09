@@ -2,6 +2,8 @@
 // Created by nic on 07/08/22.
 //
 
+#pragma once
+
 #ifndef __unix__
 #ifndef GRAPHICS_OLED_1_5INCH_128X128_H
 #define GRAPHICS_OLED_1_5INCH_128X128_H
@@ -166,6 +168,8 @@ class OLED_1inch5_128 {
         OLED_WriteReg(0xAF);
     }
 
+    RGB565* getHandle() { return dmaBuffer; }
+
     void clear() {
         uint32_t i;
 
@@ -207,11 +211,10 @@ RGB565 OLED_1inch5_128::dmaBuffer[OLED_1in5_RGB_WIDTH * OLED_1in5_RGB_HEIGHT];
 
 template<StreamSignature<RGB565> Source>
 void OLED_1inch5_128::bake(Source src) {
-    for(uint32_t x = 0; x < OLED_1in5_RGB_WIDTH; x++) {
-        for(uint32_t y = 0; y < OLED_1in5_RGB_HEIGHT; y++) {
-            dmaBuffer[x + y * OLED_1in5_RGB_WIDTH] = src.operator() ( {x, y} );
-        }
-    }
+    for (uint32_t x = 0; x < OLED_1in5_RGB_WIDTH; x++)
+        for (uint32_t y = 0; y < OLED_1in5_RGB_HEIGHT; y++)
+            dmaBuffer[x + y * OLED_1in5_RGB_WIDTH] =
+                src.operator() ( {x, OLED_1in5_RGB_WIDTH - y - 1} );
 }
 
 #endif //GRAPHICS_OLED_1_5INCH_128X128_H

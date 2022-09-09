@@ -2,6 +2,8 @@
 // Created by nic on 02/08/22.
 //
 
+#pragma once
+
 #ifndef GRAPHICS_SDF_PRIMITIVES_H
 #define GRAPHICS_SDF_PRIMITIVES_H
 

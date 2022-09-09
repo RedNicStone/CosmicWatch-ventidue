@@ -1,6 +1,8 @@
 //
-// Created by nic on 06/07/22.
+// Created by RedNicStone on 06/07/22.
 //
+
+#pragma once
 
 #ifndef GRAPHICS_WRITE_FILE_H
 #define GRAPHICS_WRITE_FILE_H
@@ -8,7 +10,6 @@
 #include <cstring>
 
 #include "graphics/renderer/stream_converters.h"
-
 
 class FileWriter {
   private:
@@ -20,6 +21,11 @@ class FileWriter {
     template<StreamSignature<RGB8> Source>
     static void writeImageToFile(const char* filename,
                                  Source src,
+                                 unsigned int width,
+                                 unsigned int height);
+
+    static void writeImageToFile(const char* filename,
+                                 const std::function<RGB8(const Point2D&)>& src,
                                  unsigned int width,
                                  unsigned int height);
 };
@@ -60,6 +66,27 @@ void FileWriter::writeImageToFile(const char *filename,
     for (unsigned int x = 0; x < width; x++)
         for (unsigned int y = 0; y < height; y++) {
             RGB8 color = src.operator() (Point2D(x, y));
+            std::memcpy(data + 54 + (x + y * width) * 3, color.data(), 3);
+        }
+
+    auto file = fopen(filename, "wb");
+    fwrite(data, 1, filesize, file);
+    fclose(file);
+
+    delete[] data;
+}
+
+void FileWriter::writeImageToFile(const char *filename,
+                                  const std::function<RGB8(const Point2D&)>& src,
+                                  unsigned int width,
+                                  unsigned int height) {
+    size_t filesize = getFilesize(width, height);
+    auto* data = new unsigned char[filesize];
+
+    writeToArray(data, width, height);
+    for (unsigned int x = 0; x < width; x++)
+        for (unsigned int y = 0; y < height; y++) {
+            RGB8 color = src(Point2D(x, y));
             std::memcpy(data + 54 + (x + y * width) * 3, color.data(), 3);
         }
 

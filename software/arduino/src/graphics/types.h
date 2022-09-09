@@ -2,6 +2,8 @@
 // Created by RedNicStone for graphics on 01/08/22.
 //
 
+#pragma once
+
 #ifndef GRAPHICS_TYPES_H
 #define GRAPHICS_TYPES_H
 
@@ -21,8 +23,8 @@ inline constexpr unsigned char operator "" _uc( unsigned long long arg ) noexcep
 typedef uvec2 Point2D;
 
 struct Region2D {
-    uvec2 begin;
-    uvec2 end;
+    Point2D begin;
+    Point2D end;
 };
 
 template<typename T>
@@ -31,33 +33,41 @@ class PixelBuffer {
     Point2D size;
 
     T* data;
+    bool isDataOwned = true;
+
+    explicit PixelBuffer(Point2D size, T* data) : size(size), data(data) {};
 
   public:
     explicit PixelBuffer(Point2D size);
+    PixelBuffer(PixelBuffer<T>& buffer) : data(buffer.data), size(buffer.size), isDataOwned(false) { };
+    PixelBuffer(PixelBuffer<T>&& buffer)  noexcept : data(buffer.data), size(buffer.size), isDataOwned(false) { };
 
     [[nodiscard]] inline Point2D getSize() const { return size; }
+
+    inline T operator() (Point2D pos) { return getPixel(pos); }
 
     inline virtual T getPixel(Point2D pos) const;
     inline virtual bool setPixel(Point2D pos, T value);
 
-    virtual bool nativeTranspose(PixelBuffer<T>& buffer, Region2D region, Point2D destination);
+    virtual bool nativeTranspose(PixelBuffer<T>* buffer, Region2D region, Point2D destination);
     virtual bool fill(T value, Region2D region);
 
     inline T* getDataHandle() { return data; }
     inline const T* getDataHandle() const { return data; }
 
-    virtual ~PixelBuffer() { delete[] data; }
+    virtual ~PixelBuffer() { if (isDataOwned) delete[] data; }
 };
 
 template<typename T>
 class UnsafePixelBuffer : public PixelBuffer<T> {
   public:
     explicit UnsafePixelBuffer(Point2D size) : PixelBuffer<T>(size) { };
+    UnsafePixelBuffer(Point2D size, T* data) : PixelBuffer<T>(size, data) { PixelBuffer<T>::isDataOwned = false; }
 
     inline virtual T getPixel(Point2D pos) const;
     inline virtual bool setPixel(Point2D pos, T value);
 
-    virtual bool nativeTranspose(PixelBuffer<T>& buffer, Region2D region, Point2D destination);
+    virtual bool nativeTranspose(PixelBuffer<T>* buffer, Region2D region, Point2D destination);
     virtual bool fill(T value, Region2D region);
 };
 
@@ -128,7 +138,7 @@ typedef uint16_t RGB565;
 
 template<typename T>
 PixelBuffer<T>::PixelBuffer(Point2D size) {
-    data = new T[size.x() * size.y()];
+    data = new T[size.x() * size.y()]();
     //Serial.println(F("Size: ") + String(size.x()) + String(size.y()));
     PixelBuffer<T>::size = size;
 }
@@ -152,18 +162,18 @@ bool PixelBuffer<T>::setPixel(Point2D pos, T value) {
 }
 
 template<typename T>
-bool PixelBuffer<T>::nativeTranspose(PixelBuffer<T> &buffer, Region2D region, Point2D destination) {
+bool PixelBuffer<T>::nativeTranspose(PixelBuffer<T> *buffer, Region2D region, Point2D destination) {
     if (region.begin.x() > size.x() || region.begin.y() > size.y() ||
         region.begin.x() > region.end.x() || region.begin.x() > region.end.x() ||
-        destination.x() - region.begin.x() + region.end.x() > buffer.size.x() ||
-        destination.y() - region.begin.y() + region.end.y() > buffer.size.y())
+        destination.x() - region.begin.x() + region.end.x() > buffer->size.x() ||
+        destination.y() - region.begin.y() + region.end.y() > buffer->size.y())
         return false;
 
     for (unsigned int x = 0; x < region.end.x() - region.begin.x(); ++x) {
         for (unsigned int y = 0; y < region.end.y() - region.begin.y(); ++y) {
             auto pos = Point2D(x, y);
             T value = getPixel(region.begin + pos);
-            buffer.setPixel(destination + pos, value);
+            buffer->setPixel(destination + pos, value);
         }
     }
     return true;
@@ -197,12 +207,12 @@ bool UnsafePixelBuffer<T>::setPixel(Point2D pos, T value) {
 }
 
 template<typename T>
-bool UnsafePixelBuffer<T>::nativeTranspose(PixelBuffer<T> &buffer, Region2D region, Point2D destination) {
+bool UnsafePixelBuffer<T>::nativeTranspose(PixelBuffer<T> *buffer, Region2D region, Point2D destination) {
     for (unsigned int x = 0; x < region.end.x() - region.begin.x(); ++x) {
         for (unsigned int y = 0; y < region.end.y() - region.begin.y(); ++y) {
             auto pos = Point2D(x, y);
             T value = getPixel(region.begin + pos);
-            buffer.setPixel(destination + pos, value);
+            buffer->setPixel(destination + pos, value);
         }
     }
     return true;

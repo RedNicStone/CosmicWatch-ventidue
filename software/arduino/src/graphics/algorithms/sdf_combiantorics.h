@@ -2,6 +2,8 @@
 // Created by nic on 03/08/22.
 //
 
+#pragma once
+
 #ifndef GRAPHICS_SDF_COMBIANTORICS_H
 #define GRAPHICS_SDF_COMBIANTORICS_H
 

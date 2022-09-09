@@ -13,19 +13,50 @@
 #include "src/graphics/renderer/stream_converters.h"
 #include "src/graphics/renderer/assets.h"
 #include "src/graphics/driver/OLED_1_5INCH_128x128.h"
+#include "src/graphics/font/font.h"
+
+#include "data/fonts/verdana/Verdana.ttf.h"
+#include "data/fonts/droid-sans/DroidSans.ttf.h"
+#include "data/splash/demo.raw.h"
 
 using namespace SDF;
 
 unsigned int height = 128;
 unsigned int width = 128;
+int iter = 0;
+bool iterFlag = false;
 
 float t = 0.5;
 
 OLED_1inch5_128 oled;
+FontRenderer fontV[] = { FontRenderer(Verdana_ttf, sizeof(Verdana_ttf), 14), 
+                         FontRenderer(Verdana_ttf, sizeof(Verdana_ttf), 13), 
+                         FontRenderer(Verdana_ttf, sizeof(Verdana_ttf), 12), 
+                         FontRenderer(Verdana_ttf, sizeof(Verdana_ttf), 11) };
+FontRenderer fontD[] = { FontRenderer(DroidSans_ttf, sizeof(DroidSans_ttf), 14), 
+                         FontRenderer(DroidSans_ttf, sizeof(DroidSans_ttf), 13), 
+                         FontRenderer(DroidSans_ttf, sizeof(DroidSans_ttf), 12), 
+                         FontRenderer(DroidSans_ttf, sizeof(DroidSans_ttf), 11) };
 
-void calcSDF(float t_) {
-    // Create SDF
-    auto sdf = MVisualization(
+void calcSDF(int t_) {
+    auto* fontArray = fontV;
+    if (t_ > 3) {
+        fontArray = fontD;
+        t_ -= 4;
+    }
+
+    auto buffer = PixelBuffer<uint8_t>({ 128u, 128u });
+    fontArray[t_].renderTextToBuffer("This is a\n"
+                            "complex multiline\n"
+                            "text to\n"
+                            "demonstrate text\n"
+                            "rendering\n"
+                            "capability", &buffer);
+
+    auto sdf = SDF::SGrayscale(buffer);
+  
+    // Create SDF 
+    /*auto sdf = MVisualization(
       TTranslate(
         CInterpolate(
           GSegment(vec2(-35.0f), vec2(35.0f), 10.0f),
@@ -34,15 +65,20 @@ void calcSDF(float t_) {
            90), 
         t_),
       vec2(64))
-    );
+    );*/
 
-    auto sdfPixel = SPack565(MRGB8(sdf));
+    auto sdfPixel = SPack565(sdf);
 
     oled.bake(sdfPixel);
 }
 
 void setup() {
   oled = OLED_1inch5_128(6);
+  auto splashBuffer = UnsafePixelBuffer<RGB8>({ 128u, 128u }, (RGB8*) demo_raw);
+  auto sdfPixel = SPack565(splashBuffer);
+  oled.bake(sdfPixel);
+  oled.transfer();
+  delay(5000);
 }
 
 void loop() {
@@ -54,16 +90,24 @@ void loop() {
     // Generate a new Image
     unsigned long startTime = millis();
     
-    calcSDF(0.5 + sin(t) * 0.5);
+    calcSDF(iter);
     unsigned long drawTime = millis();
     
     oled.transfer();
     unsigned long transferTime = millis();
-    
-    t += 0.2;
 
     timeDrawing += drawTime - startTime;
     timeTransferring += transferTime - drawTime;
+
+    if (iter >= 7)
+        iterFlag = true;
+    else if (iter <= 0)
+        iterFlag = false;
+  
+    if (iterFlag)
+        iter--;
+    else
+        iter++;
   }
   
   double transferedData = OLED_1in5_RGB_HEIGHT * OLED_1in5_RGB_WIDTH * 2 * 30 / 1000;

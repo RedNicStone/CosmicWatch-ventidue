@@ -2,6 +2,8 @@
 // Created by RedNicStone for graphics on 01/08/22.
 //
 
+#pragma once
+
 #ifndef GRAPHICS_VECTOR_H
 #define GRAPHICS_VECTOR_H
 
@@ -54,9 +56,7 @@ class vec_abs {
     (sizeof...(Ts) == N)  // there are N arguments
     explicit vec_abs(const Ts&&... values);  // construct from multiple arguments*/
 
-    template<typename ...Ts> requires // only compile if:
-    std::conjunction<std::is_convertible<Ts, T>...>::value &&  // all can be converted to T
-        (sizeof...(Ts) == N)  // there are N arguments
+    template<typename ...Ts> requires (sizeof...(Ts) == N)  // there are N arguments
     explicit(N <= 1) vec_abs(const Ts... values);  // construct from multiple arguments
 
     template<class _ = void> requires // only compile if:
@@ -65,6 +65,9 @@ class vec_abs {
 
     template<typename TOther> requires // only compile if:
     std::is_convertible<TOther, T>::value  // all can be converted to T
+    explicit vec_abs(const vec_abs<TOther, N>& vector);  // construct from multiple arguments
+
+    template<typename TOther>
     explicit vec_abs(const vec_abs<TOther, N>& vector);  // construct from multiple arguments
 
 
@@ -165,6 +168,18 @@ class vec_abs {
     inline vec_abs absolute() const;
     //template<class _ = void> requires std::is_arithmetic_v<T>
     //const vec_abs& cross(const vec_abs& vec);
+    template<class _ = void>
+    inline bool operator==(const vec_abs& vector) const;
+    template<class _ = void>
+    inline bool operator!=(const vec_abs& vector) const;
+    template<class _ = void>
+    inline bool operator<(const vec_abs& vector) const;
+    template<class _ = void>
+    inline bool operator>(const vec_abs& vector) const;
+    template<class _ = void>
+    inline bool operator<=(const vec_abs& vector) const;
+    template<class _ = void>
+    inline bool operator>=(const vec_abs& vector) const;
 
     [[nodiscard]] inline void* data() { return pData.data(); };
 
@@ -240,13 +255,13 @@ vec_abs<T, N>::vec_abs(const T value) {
 }
 
 template<typename T, size_t N>
-template<typename... Ts> requires std::conjunction<std::is_convertible<Ts, T>...>::value && (sizeof...(Ts) == N)
+template<typename... Ts> requires (sizeof...(Ts) == N)
 vec_abs<T, N>::vec_abs(const Ts... values) {
-    pData = std::array<T, N>{values...};  // create a new array with the given values
+    pData = std::array<T, N>{static_cast<T>(values)...};  // create a new array with the given values
 }
 
 template<typename T, size_t N>
-template<typename TOther> requires std::is_convertible<TOther, T>::value
+template<typename TOther>
 vec_abs<T, N>::vec_abs(const vec_abs<TOther, N> &vector) {
     pData = std::array<T, N>();
     for (size_t i = 0; i < N; i++) {
@@ -396,6 +411,60 @@ vec_abs<T, N> vec_abs<T, N>::absolute() const {
         res[i] = std::abs(pData[i]);
     }
     return res;
+}
+
+template<typename T, size_t N>
+template<class _>
+bool vec_abs<T, N>::operator==(const vec_abs &vector) const {
+    bool res = true;
+    for (size_t i = 0; i < N; i++)
+        res &= pData[i] == vector.pData[i];
+    return res;
+}
+
+template<typename T, size_t N>
+template<class _>
+bool vec_abs<T, N>::operator!=(const vec_abs &vector) const {
+    for (size_t i = 0; i < N; i++)
+        if (pData[i] != vector.pData[i])
+            return false;
+    return true;
+}
+
+template<typename T, size_t N>
+template<class _>
+bool vec_abs<T, N>::operator<(const vec_abs &vector) const {
+    for (size_t i = 0; i < N; i++)
+        if (pData[i] >= vector.pData[i])
+            return false;
+    return true;
+}
+
+template<typename T, size_t N>
+template<class _>
+bool vec_abs<T, N>::operator>(const vec_abs &vector) const {
+    for (size_t i = 0; i < N; i++)
+        if (pData[i] <= vector.pData[i])
+            return false;
+    return true;
+}
+
+template<typename T, size_t N>
+template<class _>
+bool vec_abs<T, N>::operator<=(const vec_abs &vector) const {
+    for (size_t i = 0; i < N; i++)
+        if (pData[i] > vector.pData[i])
+            return false;
+    return true;
+}
+
+template<typename T, size_t N>
+template<class _>
+bool vec_abs<T, N>::operator>=(const vec_abs &vector) const {
+    for (size_t i = 0; i < N; i++)
+        if (pData[i] < vector.pData[i])
+            return false;
+    return true;
 }
 
 template<typename T, size_t N> requires std::is_arithmetic_v<T>

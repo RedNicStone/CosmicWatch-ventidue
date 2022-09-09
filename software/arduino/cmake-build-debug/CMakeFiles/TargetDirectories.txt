@@ -1,3 +1,4 @@
+/home/niels/CLionProjects/CosmicWatch-ventidue/software/arduino/cmake-build-debug/CMakeFiles/stb.dir
 /home/niels/CLionProjects/CosmicWatch-ventidue/software/arduino/cmake-build-debug/CMakeFiles/graphics.dir
 /home/niels/CLionProjects/CosmicWatch-ventidue/software/arduino/cmake-build-debug/CMakeFiles/edit_cache.dir
 /home/niels/CLionProjects/CosmicWatch-ventidue/software/arduino/cmake-build-debug/CMakeFiles/rebuild_cache.dir

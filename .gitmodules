@@ -1,0 +1,3 @@
+[submodule "software/arduino/lib/stb"]
+	path = software/arduino/lib/stb
+	url = https://github.com/nothings/stb.git

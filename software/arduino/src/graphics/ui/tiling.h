@@ -2,6 +2,8 @@
 // Created by nic on 06/08/22.
 //
 
+#pragma once
+
 #ifndef GRAPHICS_TILING_H
 #define GRAPHICS_TILING_H
 

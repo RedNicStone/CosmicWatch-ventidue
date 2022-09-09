@@ -2,6 +2,8 @@
 // Created by nic on 05/08/22.
 //
 
+#pragma once
+
 #ifndef GRAPHICS_SDF_MIX_H
 #define GRAPHICS_SDF_MIX_H
 

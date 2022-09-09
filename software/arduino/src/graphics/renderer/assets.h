@@ -2,6 +2,8 @@
 // Created by nic on 04/08/22.
 //
 
+#pragma once
+
 #ifndef GRAPHICS_ASSET_H
 #define GRAPHICS_ASSET_H
 

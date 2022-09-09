@@ -2,6 +2,8 @@
 // Created by nic on 02/08/22.
 //
 
+#pragma once
+
 #ifndef GRAPHICS_G_GENERATORS_H
 #define GRAPHICS_G_GENERATORS_H
 

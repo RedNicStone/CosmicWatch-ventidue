@@ -12,12 +12,26 @@
 #include <utility>
 
 #include "../types.h"
+#include "../font/font.h"
+#include "style.h"
+
+#define DRAW_SIGNATURE UIPixelType renderFunction(const Point2D& pos)
 
 
 namespace UI {
   typedef vec4 UIPixelType;
 
+  typedef std::function<UIPixelType(const Point2D&)> RenderFunction;
+  static UIPixelType emptyDraw(const Point2D&) { return {}; }
+
+  bool AABB(const Point2D& pos, const Region2D& bBox) {
+      return (pos > bBox.begin && pos < bBox.end);
+  }
+
   class Widget {
+    protected:
+      Point2D size{};
+
     public:
       virtual void setVisible(bool) {}
       [[nodiscard]] virtual bool isVisible() { return false; }
@@ -29,8 +43,7 @@ namespace UI {
       virtual void setSensitive(bool) {}
       [[nodiscard]] virtual bool isSensitive() const { return false; }
 
-      [[nodiscard]] virtual std::function<UIPixelType(const vec2&)> getDrawFunction() const { 
-          return [](const vec2&) { return UIPixelType(); }; }
+      [[nodiscard]] virtual RenderFunction getDrawFunction() const { return emptyDraw; }
   };
   
   class Drawable : public Widget {
@@ -48,8 +61,7 @@ namespace UI {
       void setSensitive(bool) override {}
       [[nodiscard]] bool isSensitive() const override { return false; }
 
-      [[nodiscard]] std::function<UIPixelType(const vec2&)> getDrawFunction() const override {
-          return [](const vec2&) { return UIPixelType(); }; }
+      [[nodiscard]] RenderFunction getDrawFunction() const override { return emptyDraw; }
   };
   
   class Interactable : public Drawable {
@@ -65,8 +77,7 @@ namespace UI {
       void setSensitive(bool value) override { sensitive = value; }
       [[nodiscard]] bool isSensitive() const override { return sensitive; }
 
-      [[nodiscard]] std::function<UIPixelType(const vec2&)> getDrawFunction() const override {
-          return [](const vec2&) { return UIPixelType(); }; }
+      [[nodiscard]] RenderFunction getDrawFunction() const override { return emptyDraw; }
   };
 
   class Button : public Interactable {
@@ -75,13 +86,15 @@ namespace UI {
 
     protected:
       bool active;
-      std::string description;
+      TextObject text;
+      StyleSheet* style;
+
+      DRAW_SIGNATURE;
 
     public:
-      explicit Button(std::string description) : description(std::move(description)) {};
+      explicit Button(const std::string& description, StyleSheet* style, bool activated = false);
 
-      [[nodiscard]] std::function<UIPixelType(const vec2&)> getDrawFunction() const override {
-          return [](const vec2&) { return UIPixelType(); }; }
+      [[nodiscard]] RenderFunction getDrawFunction() const override { return emptyDraw; }
   };
 
 }
